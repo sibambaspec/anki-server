@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  anki_server:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=anki_server.settings
+    volumes:
+      - .:/app
